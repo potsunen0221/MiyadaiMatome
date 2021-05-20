@@ -27,9 +27,9 @@
 
 ## Usage
 
-MiyadaiMatomeフォルダをダウンロードし、pythonで実行してください。
+MiyadaiMatomeフォルダをダウンロードし、デスクトップなどに移動後、pythonで実行してください。
 ```sh
-$ python3 /Users/hoge/Desktop/MiyadaiMatome/CBT.py # hoge内にはユーザー名
+$ python3 /Users/hoge/Desktop/MiyadaiMatome-main/CBT.py # hoge内にはユーザー名
 ```
 
 # Author
