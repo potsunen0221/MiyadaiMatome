@@ -2,7 +2,7 @@
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-宮大まとめはpythonでプログラムされた、問題抽出と正誤判定を行うvetCBT/獣医師国家試験対策用のシステムです。
+宮大まとめはpythonでプログラムされた、問題抽出と正誤判定を行うvetCBT/獣医師国家試験対策用のシステムです。  
 本システムは毎年、宮崎大学農学部獣医学科6年生によって作成される獣医師国家試験の解説集をCBTに近い形式で出力できるようにしたものです。  
 現在、exe化して環境構築(python3の導入)なしで実行できるように調整中です。
  
