@@ -37,7 +37,7 @@ $ python3 /Users/hoge/Desktop/MiyadaiMatome-main/CBT.py # hoge内にはユーザ
  
 * 作成者  
 関谷 麻杜
-* 所属  
+* 旧所属  
 宮崎大学医学獣医学総合研究科
 * E-mail  
 asat.myz.vet[at]gmail.com
