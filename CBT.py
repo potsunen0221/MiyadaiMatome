@@ -7,6 +7,7 @@ import json
 import os
 import random
 import re
+import sys
 
 class pyKBCT:
     
@@ -55,12 +56,14 @@ class pyKBCT:
         
     def myConditions(self, source):
         print('\n設定を行います。')
+        
         set_condition = False
         while set_condition is not True:
             print('\n以下から解きたい回次を選んで半角英数で入力してください。(すべて選ぶ場合は入力なし。複数の場合は半角スペース区切り。)')
-            print('~~~~~~~~~~~~~~回次リスト~~~~~~~~~~~~~~')
-            print('60 61 62 63 64 65 66 67 68 69 70 71')
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            years = sorted(list(set([i['year'] for i in source])))
+            print("~"*(3*int(len(years)/2)-5),"回次リスト","~"*(3*int(len(years)/2)-5),sep="")
+            print(*years)
+            print("~"*3*len(years))
             select_year =  [int(x) for x in input().split()]
             if select_year: questions = [i for i in source if i['year'] in select_year]
             else: questions = source
@@ -151,10 +154,10 @@ class pyKBCT:
 
                 if q['multiple'] == 1:
                     for i, c in enumerate([d.get('choice') for d in c_list],1):
-                        print(f'{i}, {c}')
+                        print(f'{i}. {c}')
                 else:
                     for (let, c) in zip(['a', 'b', 'c', 'd', 'e'], [d.get('choice') for d in c_list]):
-                        print(f'{let}, {c}')
+                        print(f'{let}. {c}')
                     if q['multiple'] == 2:
                         print('\n1. a, b     2. a, e     3. b, c     4. c, d     5. d, e')
                     elif q['multiple'] == 3:
@@ -248,12 +251,12 @@ class pyKBCT:
         
 if __name__ == "__main__":
     
-    dir = os.path.split(os.path.abspath(__file__))[0]
-#    dir = os.path.dirname(sys.executable)
-    questions_data = dir + '/test.json'
+#    dir = os.path.split(os.path.abspath(__file__))[0]
+    dir = os.path.dirname(sys.executable)
+    questions_data = dir + '/questions.json'
     
-    print('\n宮大まとめ 3.0.3 (2021-01-15)')
-    print('Copyright (C) 2019-2020 Asato Sekiya')
+    print('\n宮大まとめ 3.0.5 (2022-12-11)')
+    print('Copyright (C) 2019-2022 Asato Sekiya')
     print('\n宮大まとめはpythonでプログラムされた、テキストから問題抽出及び正誤判定を行うvetCBTおよび獣医師国家試験対策用のシステムです。')
     print('本システムは毎年、宮崎大学農学部獣医学科6年生によって作成される獣医師国家試験の解説集をCBTに近い形式で出力できるようにしたものです。')
     print('本システムの管理者以外による無断譲渡は固く禁止いたします。\n')
