@@ -40,5 +40,5 @@ $ python3 /Users/hoge/Desktop/MiyadaiMatome-main/CBT.py # hoge内にはユーザ
 * 旧所属  
 宮崎大学医学獣医学総合研究科
 * E-mail  
-asat.myz.vet[at]gmail.com
+potsunen0221[at]gmail.com
   ([at]→@)
